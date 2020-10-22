@@ -1,5 +1,6 @@
 plugin: servicenow.servicenow.now
 table: cmdb_ci_win_server
+filter_results: name>=FREQSANS006^name<=FREQSANS007
 fields:
   - ip_address
   - fqdn
