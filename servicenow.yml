@@ -12,8 +12,8 @@ fields:
   - u_http_exception
 keyed_groups:
   - key: sn_sys_class_name | lower
-	prefix: ''
-	separator: ''
+ prefix: ''
+ separator: ''
   - key: sn_os | lower
-	prefix: ''
-	separator: ''
+  prefix: ''
+  separator: ''
