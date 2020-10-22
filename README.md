@@ -1,4 +1,4 @@
-# R&Co demo
+# demo
 
 ## Demo scope
 1. The capability of Ansible of using the same Playbook to create/manage a set of machines, as well as to be run in check-mode to show drifts. Leveraging the JSON callback mechanism and a script the check-mode run should create a visual report in HTML format. This should show the Initial configuration(Job template), a Scheduled DryRun, the remediation of the configuration drift based on DryRun result or exempt(considering the exemptions and changes done manually into the system).
