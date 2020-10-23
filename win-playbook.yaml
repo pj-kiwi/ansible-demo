@@ -1,5 +1,5 @@
 ---
-- hosts: freqsans007.rth.ad.rothschild.com
+- hosts: all
   tasks:
     - name: Ensure IIS is enabled
       win_feature:
