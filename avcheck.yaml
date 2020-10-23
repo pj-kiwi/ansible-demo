@@ -1,8 +1,6 @@
 ---
 - name: Check AV Service
   hosts: all
-  gather_facts: true
-  connection: winrm
   tasks:
   - name: Check Cylance is Running
     win_service:
