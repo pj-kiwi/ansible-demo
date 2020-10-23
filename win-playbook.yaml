@@ -37,4 +37,4 @@
       become: True
       when: iis_https_exception is true
       environment:
-       no_proxy: *
+       no_proxy: 10.100.0.0/16
