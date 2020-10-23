@@ -1,0 +1,10 @@
+---
+- name: Check AV Service
+  hosts: all
+
+  tasks:
+  - name: Check Cylance is Running
+    win_service:
+     name: CylanceSvc
+     start_mode: auto
+     state: started
