@@ -27,8 +27,8 @@
         name: Default Web Site
         port: 80
         state: present
+        become: yes
       when: sn_u_http_exception == "true"
-      become: yes
     - name: Ensure that there is no binding on HTTPS port
       win_iis_webbinding:
         name: Default Web Site
