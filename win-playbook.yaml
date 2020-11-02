@@ -18,6 +18,7 @@
         name: Default Web Site
         protocol: https
         port: 443
+        certificate_store_name: 
         certificate_hash: 5728220c537f92754c5ea4e70035fcdb4b0e58e2
         state: present
         become: yes
