@@ -1,8 +1,5 @@
 ---
 - hosts: all
-- name: Show facts available on the system
-  ansible.builtin.debug:
-    var: ansible_facts
   tasks:
     - name: Ensure IIS is enabled
       win_feature:
