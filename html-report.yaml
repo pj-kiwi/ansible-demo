@@ -29,6 +29,8 @@
         subject: Ansible Report
         from: "{{ smtp_sender }}"
         to: "{{ email_destination }}"
+        username: "{{ smtp_username }}"
+        password: "{{ smtp_password }}"
         body: See attachment
         attach:
           - /tmp/report.html
