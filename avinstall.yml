@@ -1,8 +1,7 @@
 ---
 - hosts: all
-- name: Install Remote Desktop Connection Manager from msi with a permanent log
+- name: Install CylanceAV Agent
   ansible.windows.win_package:
-    path: https://download.microsoft.com/download/A/F/0/AF0071F3-B198-4A35-AA90-C68D103BDCCF/rdcman.msi
-    product_id: '{0240359E-6A4C-4884-9E94-B397A02D893C}'
-    state: present
-    log_path: D:\logs\vcredist_x64-exe-{{lookup('pipe', 'date +%Y%m%dT%H%M%S')}}.log
+    path: \\rth\glo\Scripts\Cylance\CylanceProtect_x64.msi
+    arguments: /qn PIDKEY=U7LNmlkXbFsJQXN9MHuVLVRTE LAUNCHAPP=1 SELFPROTECTIONLEVEL=2 REGWSC=1 /L*vx c:\temp\cylanceprotectinstall.log
+
