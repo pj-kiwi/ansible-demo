@@ -2,7 +2,7 @@
 - hosts: all
   tasks:
   - name: Install CylanceAV Agent
-    ansible.windows.win_package:
+    win_package:
      path: \\rth\glo\Scripts\Cylance\CylanceProtect_x64.msi
      product_id: '2E64FC5C-9286-4A31-916B-0D8AE4B22954'
      arguments: /qn PIDKEY=U7LNmlkXbFsJQXN9MHuVLVRTE LAUNCHAPP=1 SELFPROTECTIONLEVEL=2 REGWSC=1 /L*vx c:\temp\cylanceprotectinstall.log
