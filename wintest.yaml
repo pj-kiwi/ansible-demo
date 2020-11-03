@@ -1,3 +1,4 @@
 ---
 - hosts: all
   gather_facts: True
+  gather_subset: network,hardware,virtual,facter,ohai
