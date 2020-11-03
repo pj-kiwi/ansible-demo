@@ -22,7 +22,8 @@
         src: html-report.j2
         dest: /tmp/report.html
         mode: '0644'
-    - name: Copy a single file
-      copy:
+    - name: Upload Report
+      net_put:
        src: /tmp/report.html
-       dest: \\10.100.0.171\www\
+       protocol: ftp
+       dest: 10.100.0.171:/report.html
