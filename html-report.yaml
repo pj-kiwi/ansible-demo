@@ -20,4 +20,4 @@
     - name: Prepare the report
       win_template:
         src: html-report.j2
-        dest: "\\10.100.0.171\\www\\report.html"
+        dest: "//10.100.0.171//www//report.html"
