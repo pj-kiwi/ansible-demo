@@ -9,7 +9,7 @@
   tasks:
     - name: Get the previous job in the current workflow
       tower_previous_workflow_job:
-      var: ansible_tower
+        var: ansible_tower
         tower_job_id: "{{ job_id }}"
       register: previous_job
     - name: Beautify output
