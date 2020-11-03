@@ -2,6 +2,10 @@
 - hosts: localhost
   vars:
     job_id: "{{ lookup('env', 'JOB_ID') }}"
+    ansible_tower:
+        tower_base_url: "{{ TOWER_BASE_URL }}"
+        tower_username: "{{ TOWER_USERNAME }}"
+        tower_password: "{{ TOWER_PASSWORD }}"
   tasks:
     - name: Get the previous job in the current workflow
       tower_previous_workflow_job:
