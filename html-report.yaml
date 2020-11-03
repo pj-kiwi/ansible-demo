@@ -27,6 +27,7 @@
         host: "{{ smtp_host }}"
         port: "{{ smtp_port }}"
         subject: Ansible Report
+        from: "{{ smtp_sender }}"
         to: "{{ email_destination }}"
         body: See attachment
         attach:
