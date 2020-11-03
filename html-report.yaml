@@ -22,8 +22,13 @@
         src: html-report.j2
         dest: /tmp/report.html
         mode: '0644'
-    - name: Upload Report
-      net_put:
-       src: /tmp/report.html
-       protocol: scp
-       dest: 10.100.0.171:/report.html
+    - name: Send report via email
+      mail:
+        host: "{{ smtp_host }}"
+        port: "{{ smtp_port }}"
+        subject: Ansible Report
+        from: "{{ smtp_sender }}"
+        to: "{{ email_destination }}"
+        body: See attachment
+        attach:
+          - /tmp/report.html
