@@ -5,16 +5,16 @@
   tasks:
     - name: Get the previous job in the current workflow
       tower_previous_workflow_job:
-      tower_base_url: 'https://10.100.17.235'
-      tower_password: password
-      tower_username: admin
+        tower_base_url: 'https://10.100.17.235'
+        tower_password: password
+        tower_username: admin
         tower_job_id: "{{ job_id }}"
       register: previous_job
     - name: Beautify output
       beautify_ansible_job_output:
-      tower_base_url: 'https://10.100.17.235'
-      tower_password: password
-      tower_username: admin
+        tower_base_url: 'https://10.100.17.235'
+        tower_password: password
+        tower_username: admin
         tower_job_id: "{{ previous_job.job_id }}"
       register: job 
     - name: Create SNow incidents
