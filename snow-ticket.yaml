@@ -3,9 +3,9 @@
   vars:
     job_id: "{{ lookup('env', 'JOB_ID') }}"
     ansible_tower:
-        tower_base_url: '{{ lookup("env", "TOWER_BASE_URL") }}'
-        tower_username: '{{ lookup("env", "TOWER_USERNAME") }}"
-        tower_password: '{{ lookup("env", "TOWER_PASSWORD") }}"
+        tower_base_url: "{{ lookup("env", "TOWER_BASE_URL") }}"
+        tower_username: "{{ lookup("env", "TOWER_USERNAME") }}"
+        tower_password: "{{ lookup("env", "TOWER_PASSWORD") }}"
   tasks:
     - name: Get the previous job in the current workflow
       tower_previous_workflow_job:
