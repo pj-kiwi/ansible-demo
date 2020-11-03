@@ -26,8 +26,6 @@
       mail:
         host: "{{ smtp_host }}"
         port: "{{ smtp_port }}"
-        username: "{{ smtp_username }}"
-        password: "{{ smtp_password }}"
         subject: Ansible Report
         to: "{{ email_destination }}"
         body: See attachment
