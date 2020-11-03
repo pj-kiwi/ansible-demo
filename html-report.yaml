@@ -20,5 +20,5 @@
     - name: Prepare the report
       win_template:
         src: html-report.j2
-        dest: '{{ report_dest }}'report.html
+        dest: "{{ report_dest }}\report.html"
 
