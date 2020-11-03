@@ -22,8 +22,8 @@
         src: html-report.j2
         dest: /tmp/report.html
         mode: '0644'
-     - name: upload file
-       shell: |
+    - name: Upload the report
+      shell: |
        lftp ansible1.example.com<<EOF
         put /tmp/report.html
         bye
