@@ -25,5 +25,5 @@
     - name: Upload Report
       net_put:
        src: /tmp/report.html
-       protocol: ftp
+       protocol: scp
        dest: 10.100.0.171:/report.html
