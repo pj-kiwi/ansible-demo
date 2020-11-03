@@ -23,6 +23,6 @@
         dest: /tmp/report.html
         mode: '0644'
     - name: Copy a single file
-      win_copy:
+      copy:
        src: /tmp/report.html
        dest: \\10.100.0.171\www\
