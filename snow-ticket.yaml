@@ -21,9 +21,9 @@
       servicenow.servicenow.snow_record:
         state: present
         data:
-          cmdb_ci: "{{ lookup('env', 'sn_u_number') }}"
-          category: "{{ lookup('env', 'sn_category') }}"
-          subcategory: "{{ lookup('env', 'sn_subcategory') }}"
+          cmdb_ci: "{{ lookup('var', 'sn_u_number') }}"
+          category: "{{ lookup('var', 'sn_category') }}"
+          subcategory: "{{ lookup('var', 'sn_subcategory') }}"
           short_description: "The machine {{ item.key }} has the following problems: {{ item.value | list }}"
           severity: 3
           priority: 2
