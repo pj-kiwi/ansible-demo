@@ -10,6 +10,7 @@ fields:
   - os
   - attributes
   - u_http_exception
+  - ci_id
 keyed_groups:
   - key: sn_sys_class_name | lower
     prefix: ''
