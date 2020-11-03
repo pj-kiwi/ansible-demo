@@ -13,7 +13,6 @@ fields:
   - u_number
   - category
   - subcategory
-  - status
 keyed_groups:
   - key: sn_sys_class_name | lower
     prefix: ''
