@@ -23,9 +23,9 @@
         dest: /tmp/report.html
         mode: '0644'
      - name: upload file
-        shell: |
-         lftp ansible1.example.com<<EOF
-         put /tmp/report.html
-         bye
-         EOF
-      register: result
+       shell: |
+       lftp ansible1.example.com<<EOF
+        put /tmp/report.html
+        bye
+        EOF
+       register: result
