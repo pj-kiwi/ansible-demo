@@ -22,15 +22,10 @@
         src: html-report.j2
         dest: /tmp/report.html
         mode: '0644'
-    - name: Send report via email
-      mail:
-        host: "{{ smtp_host }}"
-        port: "{{ smtp_port }}"
-        subject: Ansible Report
-        from: "{{ smtp_sender }}"
-        to: "{{ email_destination }}"
-        username: "{{ smtp_username }}"
-        password: "{{ smtp_password }}"
-        body: See attachment
-        attach:
-          - /tmp/report.html
+     - name: upload file
+        shell: |
+         lftp ansible1.example.com<<EOF
+         put /tmp/report.html
+         bye
+         EOF
+      register: result
