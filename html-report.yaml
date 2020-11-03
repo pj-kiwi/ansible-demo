@@ -28,4 +28,4 @@
         put /tmp/report.html
         bye
         EOF
-       register: result
+      register: result
