@@ -1,13 +1,8 @@
 ---
 - hosts: all
   tasks:
-  - name: Print all available facts
-    ansible.builtin.debug:
-     var: ansible_facts
-
-  - name: get the package facts
-    package_facts:
-    manager: "auto"
-
-  - name: show them
-    debug: var=ansible_facts.packages
+- name: get the package facts
+   package_facts:
+   manager: "auto"
+ - name: show them
+   debug: var=ansible_facts.packages
