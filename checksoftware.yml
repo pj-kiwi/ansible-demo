@@ -1,0 +1,3 @@
+  - name: check installed software
+    package_facts:
+      manager: auto
