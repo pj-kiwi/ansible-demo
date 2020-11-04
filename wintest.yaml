@@ -4,5 +4,5 @@
 - name: get the package facts
    package_facts:
    manager: "auto"
- - name: show them
-   debug: var=ansible_facts.packages
+- name: show them
+  debug: var=ansible_facts.packages
