@@ -1,3 +1,9 @@
+  
+---
+- hosts: all
+  tasks:
   - name: check installed software
     package_facts:
       manager: auto
+    ansible.builtin.debug:
+     var: ansible_facts.packages  
